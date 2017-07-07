@@ -1,0 +1,4 @@
+#Azure login
+Login-AzureRmAccount
+
+            
