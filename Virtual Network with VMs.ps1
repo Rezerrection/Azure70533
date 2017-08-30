@@ -7,8 +7,11 @@
 #Login to Azure
 Login-AzureRmAccount
 
-# Create a Resource Group.
+# Create Resource Group.
  New-AzureRmResourceGroup -Name 'New Vnet with subnets' -Location 'westeurope'
+
+#Create Storage
+ $storage = New-azurestorage
 
  # Create a virtual network
  $Vnet=New-AzureRmVirtualNetwork `
@@ -17,10 +20,12 @@ Login-AzureRmAccount
   -Name MyVnet `
   -AddressPrefix 192.168.0.0/16 `
   -Subnet $Subnet1,$Subnet2
-# Create two subnets.
+  
+# Create Subnet 1
 $Subnet1 = New-AzureRmVirtualNetworkSubnetConfig `
   -Name Public `
   -AddressPrefix 192.168.0.0/16
+# Creat Subnet 2
 $Subnet2 = New-AzureRmVirtualNetworkSubnetConfig `
   -Name Private `
   -AddressPrefix 192.168.0.0/16
