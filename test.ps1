@@ -1,9 +1,15 @@
-#Azure login
+#Login to Azure 
 #Create a resource group
+#Create Storage
+#Create Network
+#Create VM's
 
+#Login to Azure
 Login-AzureRmAccount
+
 # Create a resource group.
  New-AzureRmResourceGroup -Name 'New Vnet with subnets' -Location 'westeurope'
+
  # Create a virtual network
  $Vnet=New-AzureRmVirtualNetwork `
   -ResourceGroupName MyResourceGroup `
