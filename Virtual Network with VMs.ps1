@@ -25,7 +25,7 @@ Login-AzureRmAccount
 $Subnet1 = New-AzureRmVirtualNetworkSubnetConfig `
   -Name Public `
   -AddressPrefix 192.168.0.0/16
-# Creat Subnet 2
+# Create Subnet 2
 $Subnet2 = New-AzureRmVirtualNetworkSubnetConfig `
   -Name Private `
   -AddressPrefix 192.168.0.0/16
